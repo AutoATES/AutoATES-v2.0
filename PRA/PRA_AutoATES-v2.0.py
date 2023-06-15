@@ -35,7 +35,7 @@ Created on Tue October 11 09:54:00 2022
     Description of inputs and defaults.
         forest_type:    'stems', 'bav', 'pcc' and 'no_forest'
         DEM:            A raster using the GeoTiff format (int16, nodata=-9999)
-        FOREST:         A raster using the GeoTiff format (int16, nodata=-9999).
+        FOREST:         A raster using the GeoTiff format (int16, nodata=0)
         radius:         The radius of the windshelter function. A general recommendation is to use 60 m, so if the cell size is 10 m, the radius should be 6.
         prob:           Default is 0.5, (see Veitinger et al. 2016 for more information).
         winddir:        The prevailing wind direction (0-360). Default for AutoATES v2.0 is 0
@@ -196,6 +196,8 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     # Calculate slope and windshelter
     #######################
     
+    print("Calculating slope angle")
+
     with rasterio.open(DEM) as src:
         array = src.read(1)
         profile = src.profile
@@ -209,6 +211,8 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
 
     # If needed in degrees, convert using
     slope_deg = np.degrees(np.arctan(slope))
+
+    print("Calculating windshelter")
 
     # Calculate windshelter
     with rasterio.open(DEM) as src:
@@ -227,6 +231,8 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     # Save raster to path using meta data from dem.tif (i.e. projection)
     with rasterio.open('PRA/windshelter.tif', "w", **profile) as dest:
         dest.write(data)
+
+    print("Defining Cauchy functions")
 
     #######################
     # --- Cauchy functions
@@ -296,6 +302,9 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     #######################
     # --- Fuzzy logic operator
     #######################
+
+    print("Starting the Fuzzy Logic Operator")
+
     minvar = np.minimum(slopeC, windshelterC)
     minvar = np.minimum(minvar, forestC)
 
