@@ -274,7 +274,8 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     if forest_type in ['sen2cc']:
         a = 50 # still finalizing defualts for Sen2cc, likeily will be region dependent based on local forest structure
         b = 1.5
-        c = 0    
+        c = 0
+        f.write("Cauchy forest function (sen2cc): a={}, b={}, c={}\n".format(a, b, c)) 
     
     # --- Define bell curve parameters for percent canopy cover
     if forest_type in ['pcc', 'no_forest']:
