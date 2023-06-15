@@ -1,0 +1,6 @@
+Start time = 11:05:55
+forest_type: stems, DEM: PRA/DEM.tif, FOREST: PRA/FOREST.tif, radius: 6, prob: 0.5, winddir: 0, windtol 180, pra_thd: 0.15, sf: 3
+Cauchy slope function: a=11, b=4, c=43
+Cauchy windshelter function: a=3, b=10, c=3
+Cauchy forest function (stems): a=350, b=2, c=-120
+Stop time = 11:08:08
