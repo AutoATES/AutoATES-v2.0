@@ -33,7 +33,7 @@ Created on Tue October 11 09:54:00 2022
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
     Description of inputs and defaults.
-        forest_type:    'stems', 'bav', 'pcc' and 'no_forest'
+        forest_type:    'stems', 'bav', 'pcc', 'sen2cc', and 'no_forest'
         DEM:            A raster using the GeoTiff format (int16, nodata=-9999)
         FOREST:         A raster using the GeoTiff format (int16, nodata=0)
         radius:         The radius of the windshelter function. A general recommendation is to use 60 m, so if the cell size is 10 m, the radius should be 6.
@@ -76,7 +76,7 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     if os.path.exists(DEM) is False:
         print("The DEM path {} does not exist".format(DEM))
 
-    if forest_type in ['pcc', 'stems', 'bav']:
+    if forest_type in ['pcc', 'stems', 'bav', 'sen2cc']:
         # Check if path exits
         if os.path.exists(FOREST) is False:
             print("The forest path {} does not exist\n".format(FOREST))
@@ -271,6 +271,11 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
         c = -10
         f.write("Cauchy forest function (bav): a={}, b={}, c={}\n".format(a, b, c))
 
+    if forest_type in ['sen2cc']:
+        a = 50 # still finalizing defualts for Sen2cc, likeily will be region dependent based on local forest structure
+        b = 1.5
+        c = 0    
+    
     # --- Define bell curve parameters for percent canopy cover
     if forest_type in ['pcc', 'no_forest']:
         a = 40
