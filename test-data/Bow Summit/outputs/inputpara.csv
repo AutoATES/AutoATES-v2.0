@@ -1,0 +1,2 @@
+DEM,canopy,cell_count,FP,SAT01,SAT12,SAT23,SAT34,AAT1,AAT2,AAT3,TREE1,TREE2,TREE3,CC1,CC2,ISL_SIZE,WIN_SIZE
+test-data/Bow Summit/dem.tif,test-data/Bow Summit/forest.tif,test-data/Bow Summit/Overhead.tif,test-data/Bow Summit/FP_int16.tif,15,18,28,39,18,24,33,10,20,25,5,40,30000,3
