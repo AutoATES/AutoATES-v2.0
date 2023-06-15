@@ -55,8 +55,8 @@ import sys
 from datetime import datetime
 
 # --- Example
-# stems (10m raster):       python PRA_AutoATES-v2.0.py stems DEM.tif FOREST.tif 6 0.5 0 180 0.15 3
-# no_forest (10m raster):   python PRA_AutoATES-v2.0.py no_forest DEM.tif 6 0.5 0 180 0.15 3
+# stems (10m raster):       python PRA/PRA_AutoATES-v2.0.py stems PRA/DEM.tif PRA/FOREST.tif 6 0.5 0 180 0.15 3
+# no_forest (10m raster):   python PRA/PRA_AutoATES-v2.0.py no_forest PRA/DEM.tif 6 0.5 0 180 0.15 3
 
 def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
     
