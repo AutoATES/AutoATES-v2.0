@@ -1,0 +1,34 @@
+{
+    "creators": [
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Michael Neuhauser"
+        },  
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Christopher D'Amboise"
+        }, 
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Michaela Teich",
+            "orcid": "0000-0002-8850-9279"
+        },
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Andreas Kofler"
+        }, 
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Andreas Huber"
+        }, 
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Reinhard Fromm"
+        }, 
+        {
+            "affiliation": "Austrian Research Centre for Forest", 
+            "name": "Jan-Thomas Fischer",
+            "orcid": "0000-0001-5179-6457"
+        }
+    ] 
+}
