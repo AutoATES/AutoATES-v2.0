@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+title: AutoATESv2.0
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Håvard
+    family-names: Toft
+    email: htla@nve.no
+    affiliation: Norwegian Water Resources and Energy Directorate
+  - given-names: John
+    family-names: Sykes
+    email: john_sykes@sfu.ca
+    affiliation: Simon Fraser University
+repository-code: 'https://github.com/AutoATES/AutoATES-v2.0'
+abstract: >-
+  A fully automated algorithm used to provide Avalanche
+  Terrain Exposure Scale (ATES) mapping for large areas.
+keywords:
+  - Snow Avalanche
+  - Automated Avalanche Terrain Modelling
+  - Potential Avalanche Release Area Modelling
+  - Avalanche Runout Modelling
+license: GPL-3.0
+commit: AutoATESv2.1
+version: '2.1'
+date-released: '2023-06-27'
+preferred-citation:
+  authors:
+    - family-names: Toft
+      given-names: Håvard
+    - family-names: Sykes
+      given-names: John
+    - family-names: Schauer
+      given-names: Andrew
+    - family-names: Hendrikx
+      given-names: Jordy
+    - family-names: Hetland
+      given-names: Audun
+  title: "AutoATES v2.0: Automated avalanche terrain exposure scale mapping."
+  type: article
+  year: 2023
