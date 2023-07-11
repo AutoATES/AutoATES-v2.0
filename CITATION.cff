@@ -13,6 +13,10 @@ authors:
     family-names: Sykes
     email: john_sykes@sfu.ca
     affiliation: Simon Fraser University
+  - given-names: Andrew
+    family-names: Schauer
+    email: andrew@chugachavalanche.org
+    affiliation: Chugach National Forest Avalanche Center
 repository-code: 'https://github.com/AutoATES/AutoATES-v2.0'
 abstract: >-
   A fully automated algorithm used to provide Avalanche
