@@ -72,11 +72,11 @@ if forest_type in ['stems']:
 if forest_type in ['sen2ccc']:
     # --- Add tree coverage criteria
     # Tree classification: "open" (upper bound)
-    TREE1 = 100 # dummy values
+    TREE1 = 20
     # Tree classification: "sparse" (upper bound)
-    TREE2 = 250 # dummy values
+    TREE2 = 60
     # Tree classification: "mixed" (upper bound)
-    TREE3 = 500 # dummy values
+    TREE3 = 85
 
 # --- Add cell count criteria
 CC1 = 5
